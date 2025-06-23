@@ -7,6 +7,7 @@ variable "s3_bucket_name" {
   description = "Nombre del bucket S3"
 }
 variable "lambda_arn" {
-  description = "ARN de la función Lambda para notificaciones del bucket"
+  description = "ARN de la función Lambda (opcional)"
   type        = string
+  default     = null
 }
