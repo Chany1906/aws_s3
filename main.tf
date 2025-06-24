@@ -1,12 +1,12 @@
 resource "aws_s3_bucket" "input_bucket" {
-  bucket = "input-bucket-${random_string.suffix.result}"
+  bucket = "input-bucket-${var.suffix}"
   versioning {
     enabled = true
   }
 }
 
 resource "aws_s3_bucket" "output_bucket" {
-  bucket = "output-bucket-${random_string.suffix.result}"
+  bucket = "output-bucket-${var.suffix}"
   versioning {
     enabled = true
   }
